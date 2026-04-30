@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register Your Interest – Discover Zermatt</title>
+<meta name="description" content="Join the Discover Zermatt community. Register your interest and receive personalised travel inspiration, exclusive offers and seasonal highlights.">
+<link rel="stylesheet" href="style.css">
+<style>
+.benefit-card {
+  padding: 28px;
+  background: var(--navy-mid);
+  border-top: 2px solid var(--gold);
+  margin-bottom: 16px;
+}
+.benefit-icon { font-size: 1.6rem; margin-bottom: 12px; }
+.benefit-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--white); margin-bottom: 8px; }
+.benefit-card p { font-size: 0.78rem; color: rgba(255,255,255,0.55); line-height: 1.7; max-width: none; }
+.success-msg { display:none; background:var(--gold); color:var(--navy); padding:24px; text-align:center; font-weight:600; letter-spacing:0.1em; margin-top:24px; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Discover <span>Zermatt</span></a>
+  <ul class="nav-links">
+    <li><a href="discover.html">Discover</a></li>
+    <li><a href="things-to-do.html">Things To Do</a></li>
+    <li><a href="plan.html">Plan Your Trip</a></li>
+    <li><a href="booking.html">Booking</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="register.html" class="nav-cta">Register</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=80');"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <div class="activity-badge">Activity 3 – Visitor Registration</div>
+    <h1>Stay Inspired –<br><em>Join Our Community</em></h1>
+    <p>Register your interest and be the first to receive exclusive offers from Zermatt</p>
+  </div>
+</div>
+
+<div class="breadcrumb">
+  <a href="index.html">Home</a><span>›</span>Register
+</div>
+
+<section class="section section-dark">
+  <div class="grid-2" style="gap:80px;">
+
+    <!-- FORM -->
+    <div>
+      <div class="section-label">Your Details</div>
+      <h2 style="margin-bottom:32px;">Tell Us About Your <em>Dream Trip</em></h2>
+
+      <form id="registerForm" onsubmit="handleSubmit(event)">
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label>First Name *</label>
+            <input type="text" placeholder="Your first name" required>
+          </div>
+          <div class="form-group">
+            <label>Last Name *</label>
+            <input type="text" placeholder="Your last name" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Email Address *</label>
+          <input type="email" placeholder="your@email.com" required>
+        </div>
+
+        <div class="form-group">
+          <label>Country of Residence *</label>
+          <select required>
+            <option value="">Select your country</option>
+            <option>Switzerland</option>
+            <option>Germany</option>
+            <option>United Kingdom</option>
+            <option>France</option>
+            <option>United States</option>
+            <option>Netherlands</option>
+            <option>Austria</option>
+            <option>Italy</option>
+            <option>Scandinavia</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Preferred Travel Season *</label>
+          <select required>
+            <option value="">Select season</option>
+            <option>Winter (December – April)</option>
+            <option>Summer (June – October)</option>
+            <option>Both seasons</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Travel Interests (select all that apply)</label>
+          <div class="checkbox-group" style="gap:12px;margin-top:4px;">
+            <label class="checkbox-item"><input type="checkbox"> Skiing & Snowboarding</label>
+            <label class="checkbox-item"><input type="checkbox"> Hiking & Nature</label>
+            <label class="checkbox-item"><input type="checkbox"> Luxury Travel</label>
+            <label class="checkbox-item"><input type="checkbox"> Family Holidays</label>
+            <label class="checkbox-item"><input type="checkbox"> Adventure Sports</label>
+            <label class="checkbox-item"><input type="checkbox"> Wellness & Spa</label>
+            <label class="checkbox-item"><input type="checkbox"> Scenic Rail Journeys</label>
+            <label class="checkbox-item"><input type="checkbox"> Cultural Experiences</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Approximate Budget per Person</label>
+          <select>
+            <option value="">Select budget range</option>
+            <option>Under CHF 500</option>
+            <option>CHF 500 – 1,000</option>
+            <option>CHF 1,000 – 2,500</option>
+            <option>CHF 2,500 – 5,000</option>
+            <option>CHF 5,000+</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>How did you hear about us?</label>
+          <select>
+            <option value="">Select an option</option>
+            <option>Google Search</option>
+            <option>Social Media (Instagram)</option>
+            <option>Social Media (Facebook)</option>
+            <option>Travel Magazine</option>
+            <option>Recommendation from a friend</option>
+            <option>Travel Agency</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="checkbox-item" style="font-size:0.75rem;color:rgba(255,255,255,0.55);">
+            <input type="checkbox" checked>
+            Subscribe to our monthly newsletter – receive Zermatt highlights, travel tips and exclusive offers
+          </label>
+        </div>
+
+        <div class="form-group">
+          <label class="checkbox-item" style="font-size:0.75rem;color:rgba(255,255,255,0.55);">
+            <input type="checkbox" required>
+            I agree to the privacy policy and consent to being contacted with personalised travel offers *
+          </label>
+        </div>
+
+        <button type="submit" class="btn-submit">Register My Interest →</button>
+        <div class="success-msg" id="successMsg">
+          ✦ Thank you for registering! We will be in touch soon with personalised travel inspiration for your Zermatt experience.
+        </div>
+      </form>
+    </div>
+
+    <!-- BENEFITS -->
+    <div>
+      <div class="section-label">Why Register?</div>
+      <h2 style="margin-bottom:32px;">Exclusive Benefits for <em>Members</em></h2>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">🎿</div>
+        <h4>Early Access to Packages</h4>
+        <p>Be the first to access seasonal travel packages and limited-availability offers before they go public.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">✉️</div>
+        <h4>Personalised Recommendations</h4>
+        <p>Receive travel inspiration tailored specifically to your interests, budget and preferred travel season.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">🏷️</div>
+        <h4>Exclusive Discounts</h4>
+        <p>Access special rates from our partner hotels, ski areas and activity providers – only available to registered members.</p>
+      </div>
+
+      <div class="benefit-card">
+        <div class="benefit-icon">📅</div>
+        <h4>Priority Notifications</h4>
+        <p>Get notified first about new experiences, upcoming events and seasonal highlights in Zermatt.</p>
+      </div>
+
+      <div style="padding:24px;background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.2);margin-top:24px;">
+        <p style="font-size:0.78rem;color:rgba(255,255,255,0.45);line-height:1.8;max-width:none;">Your data is handled in strict accordance with Swiss data protection regulations. We never share your information with third parties without your consent. You can unsubscribe at any time.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CRM STRATEGY (visible for course evaluation) -->
+<section class="section section-cream">
+  <div class="activity-badge">Activity 3 – CRM Strategy</div>
+  <div class="section-label">How We Convert Interest into Bookings</div>
+  <h2>Our Visitor Engagement <em>Strategy</em></h2>
+  <p style="margin-bottom:48px;">As Secretary of Tourism, we use the registration data to guide potential visitors through a carefully designed conversion journey.</p>
+
+  <div class="grid-4">
+    <div style="text-align:center;padding:32px 24px;background:var(--white);">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:3rem;color:var(--gold);margin-bottom:12px;">01</div>
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--navy);margin-bottom:12px;">Welcome Email</h3>
+      <p style="font-size:0.78rem;color:var(--text-mid);line-height:1.7;">Immediate personalised welcome with curated top 5 suggestions based on their interests + early-bird discount code.</p>
+    </div>
+    <div style="text-align:center;padding:32px 24px;background:var(--white);">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:3rem;color:var(--gold);margin-bottom:12px;">02</div>
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--navy);margin-bottom:12px;">Segmented Campaigns</h3>
+      <p style="font-size:0.78rem;color:var(--text-mid);line-height:1.7;">Monthly newsletters tailored by profile: ski enthusiasts, luxury travellers, families – each receiving relevant content.</p>
+    </div>
+    <div style="text-align:center;padding:32px 24px;background:var(--white);">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:3rem;color:var(--gold);margin-bottom:12px;">03</div>
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--navy);margin-bottom:12px;">Retargeting Ads</h3>
+      <p style="font-size:0.78rem;color:var(--text-mid);line-height:1.7;">Non-bookers are retargeted via Instagram, Facebook and Google Display Ads with personalised offers.</p>
+    </div>
+    <div style="text-align:center;padding:32px 24px;background:var(--white);">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:3rem;color:var(--gold);margin-bottom:12px;">04</div>
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--navy);margin-bottom:12px;">Loyalty Programme</h3>
+      <p style="font-size:0.78rem;color:var(--text-mid);line-height:1.7;">Post-visit follow-up email with review request + loyalty discount encourages repeat tourism.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div><div class="footer-brand">Discover <span>Zermatt</span></div><p class="footer-desc">The official tourism destination website for Zermatt, Switzerland.</p></div>
+    <div class="footer-col"><h4>Explore</h4><ul><li><a href="discover.html">Discover Zermatt</a></li><li><a href="things-to-do.html">Things To Do</a></li><li><a href="plan.html">Plan Your Trip</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+    <div class="footer-col"><h4>Book</h4><ul><li><a href="booking.html">Accommodation</a></li><li><a href="booking.html">Ski Passes</a></li><li><a href="booking.html">Packages</a></li></ul></div>
+    <div class="footer-col"><h4>Connect</h4><ul><li><a href="register.html">Newsletter</a></li><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Discover Zermatt · Nina Schneider, Thenisha Thesingharajah, Léonie Bührer · UIB Tourism Course</span>
+    <span>Zermatt Tourism · Switzerland</span>
+  </div>
+</footer>
+
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  document.getElementById('successMsg').style.display = 'block';
+  document.getElementById('registerForm').querySelector('.btn-submit').style.display = 'none';
+}
+</script>
+
+</body>
+</html>
